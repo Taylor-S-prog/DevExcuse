@@ -1,0 +1,27 @@
+
+
+<div class="row justify-content-center">
+    <div class="col-8 ">
+
+    Add http_code in url like http://localhost:3000/http_code/730 or http://localhost:3000/http_code/732
+</div>
+
+<% if(excuse != null ) { %>
+    
+            <div class="col-8 ">
+
+                  <% excuse.forEach(function(excuses, index){ %>
+                    <br />
+                    Excuse :
+                  
+                    <div class="texte"><%- excuses.message %></div>
+                  <% }) %>
+
+            </div>
+
+    
+    <% } else { %>
+      <p>No item found.</p>
+<% } %>
+
+</div>

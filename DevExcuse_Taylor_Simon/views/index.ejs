@@ -1,0 +1,66 @@
+
+
+<h1 class="vignets" >Dev Excuse </h1> 
+
+
+  <div class="row justify-content-center">
+  
+    <form  action="/" enctype="multipart/form-data" method="GET"  class="row justify-content-center">
+
+          <div class="col-8 ">
+
+            <label for="tag" class="devexcuse">Select Pattern </label>
+
+              <select class="form-select form-control" name="tag" aria-label="tag"  required >
+                
+                <option value = "Inexcusable"> Inexcusable</option>
+                <option value = "NoveltyImplementations"> Novelty Implementations </option>
+                <option value = "EdgeCases"> Edge Cases</option>
+                <option value = "Fucking"> Fucking</option>
+                <option value = "SyntaxErrors"> Syntax Errors </option>
+                <option value = "Substance"> Substance </option>
+                <option value = "PredictableProblems"> Predictable Problems </option>
+                <option value = "SomebodyElse"> Somebody Else's</option>
+                <option value = "Internetcrashed"> Internet crashed </option>
+              </select>
+            
+          </div>
+
+         <div class="devexcuse">
+          
+                <% if(excuse != '') { %>
+                  <% excuse.forEach(function(excuses, index) { %>
+
+                    <% if(excuses.tag === test  ) { %>
+                    
+                      Excuse :
+                    
+
+                    <div class="texte"><%- excuses.message %></div>
+
+
+
+
+
+                    <% } %>
+                  <% }) %> 
+                <% } %>
+              
+          </div>
+
+
+
+        <div class="button">
+          <button type="submit" class="btn btn-primary">Ask Excuse </button>
+        </div>
+      </form>
+
+      
+        <div class="button">
+          <button type="submit" onclick="location.href='/addExcuse'" class="btn btn-primary">Add Excuse </button>
+        </div>
+
+        
+
+  </div>
+

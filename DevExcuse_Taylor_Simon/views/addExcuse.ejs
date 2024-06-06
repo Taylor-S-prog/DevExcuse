@@ -1,0 +1,74 @@
+<h1 >Add Dev Excuse </h1> 
+
+
+<div class="row justify-content-center">
+
+    
+  <% if(infoSubmitObj != '') { %>
+    <div class="col-8 alert alert-success" role="alert">
+      <%= infoSubmitObj %>
+    </div>
+  <% } %>
+
+  <% if(infoErrorsObj != '') { %>
+    <div class="col-8 alert alert-danger" role="alert">
+      <%= infoErrorsObj[0].message  %>
+     
+      
+    </div>
+  
+
+  <% } %>
+
+
+
+
+
+
+</div>
+
+      
+  <div class="row justify-content-center">
+
+    <form  action="/addExcuse" enctype="multipart/form-data" method="POST" class="row justify-content-center">
+
+          <div class="col-8 ">
+
+            <label for="tag" class="devexcuse">Select Pattern </label>
+
+              <select class="form-select form-control" name="tag" aria-label="tag"  required >
+                
+                <option value = "Inexcusable"> Inexcusable</option>
+                <option value = "NoveltyImplementations"> Novelty Implementations </option>
+                <option value = "EdgeCases"> Edge Cases</option>
+                <option value = "Fucking"> Fucking</option>
+                <option value = "SyntaxErrors"> Syntax Errors </option>
+                <option value = "Substance"> Substance </option>
+                <option value = "PredictableProblems"> Predictable Problems </option>
+                <option value = "SomebodyElse"> Somebody Else's</option>
+                <option value = "Internetcrashed"> Internet crashed </option>
+              </select>
+            
+          </div>
+
+
+                <div class="col-8 ">
+                  <label for="message" class="devexcuse"> Message</label>
+                  <input type="text" name="message" id="message" class="form-control"  required>
+                </div>
+
+                <div class="col-8">
+                  <label for="http_code" class="devexcuse"> Http_Code (between 000 and 999)</label>
+                  <input type="string" name="http_code" id="http_code" class="form-control" pattern="[0-9]{3}" required>
+                </div>
+
+                <div class="button">
+                  <button type="submit" class="btn btn-primary">Submit </button>
+                </div>
+
+    </form>            
+
+  </div>
+
+
+   
